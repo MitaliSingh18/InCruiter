@@ -10,14 +10,6 @@ A comprehensive quiz platform built with React, Redux, and Tailwind CSS.
 - View detailed results and analysis
 - Responsive design for all devices
 
-## Technologies Used
-
-- React.js
-- Redux (Redux Toolkit)
-- React Router
-- TypeScript
-- Vite
-
 ## Getting Started
 
 ### Prerequisites
