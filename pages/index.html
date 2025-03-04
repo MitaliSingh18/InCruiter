@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Auth System</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>User Authentication System</h1>
+      
+      <div class="auth-container">
+        <div class="tabs">
+          <button class="tab-btn active" data-tab="login">Login</button>
+          <button class="tab-btn" data-tab="register">Register</button>
+          <button class="tab-btn" data-tab="forgot">Forgot Password</button>
+        </div>
+        
+        <div class="tab-content">
+          <!-- Login Form -->
+          <div class="tab-pane active" id="login">
+            <h2>Login</h2>
+            <form id="login-form">
+              <div class="form-group">
+                <label for="login-email">Email</label>
+                <input type="email" id="login-email" required>
+              </div>
+              <div class="form-group">
+                <label for="login-password">Password</label>
+                <input type="password" id="login-password" required>
+              </div>
+              <button type="submit" class="btn">Login</button>
+            </form>
+          </div>
+          
+          <!-- Register Form -->
+          <div class="tab-pane" id="register">
+            <h2>Register</h2>
+            <form id="register-form">
+              <div class="form-group">
+                <label for="register-name">Name</label>
+                <input type="text" id="register-name" required>
+              </div>
+              <div class="form-group">
+                <label for="register-email">Email</label>
+                <input type="email" id="register-email" required>
+              </div>
+              <div class="form-group">
+                <label for="register-password">Password</label>
+                <input type="password" id="register-password" required minlength="6">
+              </div>
+              <div class="form-group">
+                <label for="register-confirm">Confirm Password</label>
+                <input type="password" id="register-confirm" required minlength="6">
+              </div>
+              <button type="submit" class="btn">Register</button>
+            </form>
+          </div>
+          
+          <!-- Forgot Password Form -->
+          <div class="tab-pane" id="forgot">
+            <h2>Forgot Password</h2>
+            <form id="forgot-form">
+              <div class="form-group">
+                <label for="forgot-email">Email</label>
+                <input type="email" id="forgot-email" required>
+              </div>
+              <button type="submit" class="btn">Reset Password</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      
+      <!-- User Profile (Hidden by default) -->
+      <div class="profile-container" style="display: none;">
+        <h2>Welcome, <span id="user-name"></span>!</h2>
+        <p>Email: <span id="user-email"></span></p>
+        <button id="logout-btn" class="btn">Logout</button>
+      </div>
+      
+      <!-- Messages -->
+      <div id="message" class="message"></div>
+    </div>
+  </body>
+</html>
